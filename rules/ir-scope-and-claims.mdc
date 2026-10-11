@@ -1,0 +1,17 @@
+---
+description: Keep independent reconstruction scope, authorization, and technical claims explicit.
+alwaysApply: true
+---
+
+# Reconstruction scope and claims
+
+This rule belongs in a dedicated reconstruction project. Apply it to reconstruction work and its artifacts.
+
+- Record target version, replacement interfaces, environment, accepted requirements, exclusions, and authorized inputs before implementation.
+- Classify a run as black-box, documentation-based, or source-informed according to actual exposure. Preserve mixed lineage per artifact.
+- Distinguish functional conformance, information-flow controls, provenance, similarity, and legal review. Each needs its own evidence.
+- Report observed, documented, inferred, and unknown behaviors separately.
+- Bound compatibility claims to accepted scope and exercised conditions. Compiling establishes a build result.
+- Never infer legal clearance, absence of infringement, or license freedom from separate agents, different syntax/language, passing tests, or a similarity score.
+
+Example: "Matched the 36 accepted serialization cases on Linux/Python 3.12; concurrent writers remain unobserved."

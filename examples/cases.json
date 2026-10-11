@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "CASE_reset",
+      "requirement_ids": [
+        "REQ_reset"
+      ],
+      "input": {
+        "ops": [
+          {
+            "op": "reset"
+          }
+        ]
+      },
+      "comparison": "exact"
+    },
+    {
+      "id": "CASE_sequence",
+      "requirement_ids": [
+        "REQ_add"
+      ],
+      "input": {
+        "ops": [
+          {
+            "op": "add",
+            "value": 3
+          },
+          {
+            "op": "add",
+            "value": 7
+          }
+        ]
+      },
+      "comparison": "exact"
+    },
+    {
+      "id": "CASE_negative",
+      "requirement_ids": [
+        "REQ_add"
+      ],
+      "input": {
+        "ops": [
+          {
+            "op": "add",
+            "value": -2
+          }
+        ]
+      },
+      "comparison": "exact"
+    }
+  ]
+}

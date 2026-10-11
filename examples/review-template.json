@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "spec_sha256": "REPLACE_WITH_CANONICAL_DIGEST",
+  "reviewer": {
+    "identity": "REPLACE_WITH_ACTUAL_REVIEWER",
+    "context_id": "REPLACE_WITH_FRESH_CONTEXT_ID",
+    "exposure": "review-only"
+  },
+  "decision": "reject",
+  "findings": [],
+  "limits": [
+    "Template only. Replace placeholders after an actual review; no legal conclusion."
+  ]
+}

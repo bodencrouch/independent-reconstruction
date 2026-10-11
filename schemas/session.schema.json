@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "session",
+  "type": "object",
+  "properties": {
+    "role": {
+      "enum": [
+        "observer",
+        "spec-writer",
+        "firewall-reviewer",
+        "implementer",
+        "conformance-reviewer",
+        "coordinator",
+        "provenance-auditor",
+        "contamination-responder",
+        "release-reviewer"
+      ]
+    },
+    "provider": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "context_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "exposure": {
+      "enum": [
+        "source-exposed",
+        "review-only",
+        "sealed-spec-only",
+        "unknown"
+      ]
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+      },
+      "minItems": 0
+    },
+    "training_history": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    }
+  },
+  "required": [
+    "role",
+    "provider",
+    "model",
+    "context_id",
+    "exposure",
+    "artifacts",
+    "training_history"
+  ],
+  "additionalProperties": false
+}

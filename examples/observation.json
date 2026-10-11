@@ -1,0 +1,11 @@
+{
+  "id": "OBS_contract",
+  "kind": "user-requirement",
+  "summary": "Fictional counter protocol defined for this package, with reset and integer addition.",
+  "origin": {
+    "locator": "user-authored-fictional-contract",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "license": "user-authored-example"
+  },
+  "confidence": "observed"
+}

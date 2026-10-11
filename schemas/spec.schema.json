@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "spec",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "target": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        },
+        "interface": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        },
+        "language": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "interface",
+        "language",
+        "environment"
+      ],
+      "additionalProperties": false
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,95}$"
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16000
+          },
+          "category": {
+            "enum": [
+              "api",
+              "errors",
+              "state",
+              "file-format",
+              "numeric",
+              "performance",
+              "security",
+              "compatibility",
+              "environment"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,95}$"
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "enum": [
+              "observed",
+              "inferred"
+            ]
+          },
+          "acceptance": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,95}$"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "statement",
+          "category",
+          "evidence",
+          "confidence",
+          "acceptance"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16000
+          },
+          "inputs": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16000
+          },
+          "outputs": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16000
+          },
+          "errors": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16000
+          }
+        },
+        "required": [
+          "name",
+          "inputs",
+          "outputs",
+          "errors"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 16000
+      },
+      "minItems": 0
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 16000
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "target",
+    "requirements",
+    "interfaces",
+    "exclusions",
+    "unknowns"
+  ],
+  "additionalProperties": false
+}

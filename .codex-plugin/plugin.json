@@ -1,0 +1,21 @@
+{
+  "name": "independent-reconstruction",
+  "version": "0.1.0",
+  "description": "Original implementations from reviewed behavioral contracts, sealed handoffs and bounded conformance evidence.",
+  "author": {
+    "name": "Workspace owner"
+  },
+  "skills": "./skills/",
+  "hooks": "./integrations/codex/hooks.json",
+  "interface": {
+    "displayName": "Independent Reconstruction",
+    "shortDescription": "Rebuild behavior through reviewed evidence and sealed handoffs.",
+    "longDescription": "Coordinate observation, behavioral contracts, source-free implementation, conformance measurement and provenance records across software reconstruction scenarios.",
+    "developerName": "Workspace owner",
+    "category": "Developer Tools",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Use ir-orchestrate to reconstruct an authorized interface through observations, reviewed specifications and a fresh implementation context."
+    ]
+  }
+}

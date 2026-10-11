@@ -1,0 +1,5 @@
+Copyright 2026. Reserved for the workspace owner's use.
+
+No public redistribution license is granted by this file. The workspace owner may
+choose distribution terms for original material separately. This file does not
+change third-party rights, notices, licenses, contracts or source obligations.

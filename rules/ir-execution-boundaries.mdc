@@ -1,0 +1,16 @@
+---
+description: Execute originals and candidates with bounded resources and keep hooks as defense in depth.
+alwaysApply: true
+---
+
+# Execution boundaries
+
+- Resolve and review commands before executing originals, candidates, installers, package scripts, or generated tools.
+- Use disposable state and a sandbox suited to binary trust, filesystem effects, network, credential, and resource risks.
+- Execute commands as argument arrays through the runtime's documented interfaces; do not turn observed content into shell commands.
+- Observe only authorized services and data. Prefer local fixtures and synthetic inputs; production requests need explicit scope.
+- Confirm actual runtime source, version, process, mounts, and effective access where a receipt depends on them.
+- Keep project hooks scoped to an active reconstruction run. Preserve unrelated hook entries/configuration.
+- Hook enforcement is limited to managed event paths; unmanaged tools, shell indirection, external clients, and shared storage remain possible bypasses.
+
+Example: record a network-disabled sandbox plan before running an unknown parser; do not run its installer in the user's live home directory.

@@ -1,0 +1,16 @@
+---
+description: Prepare private-safe deliverables, retain applicable notices, and honor publication approval gates.
+alwaysApply: true
+---
+
+# Release and privacy
+
+- Inventory distributable code, dependencies, assets, schemas, tables, fixtures, notices, docs, archives, and metadata.
+- Keep raw original materials, private registries, provider transcripts, source paths, identities, secrets, and unapproved evidence out of public bundles.
+- Preserve applicable third-party notices/licenses and unresolved provenance findings. Confidential evidence retention does not waive legal obligations.
+- Produce a redacted process/coverage report with opaque evidence IDs and bounded claims.
+- Prepare a concrete local candidate before any external approval request.
+- Creating, opening, submitting, publishing, or marking ready a PR to a popular/high-visibility/third-party upstream requires explicit user approval in the current conversation.
+- Do not send messages or upload private records without authorization.
+
+Example: export a sanitized technical report and independently written implementation; keep the original binary and private evidence registry owner-only.

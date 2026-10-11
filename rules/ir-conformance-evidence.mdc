@@ -1,0 +1,16 @@
+---
+description: Measure behavior with independently authored cases and reproducible bounded receipts.
+alwaysApply: true
+---
+
+# Conformance evidence
+
+- Follow the user's validation timing and test-file constraints. Design coverage before implementation; execute when authorized.
+- Use independently authored synthetic cases, approved specifications, explicit oracle/candidate commands, and isolated environments.
+- Record target/candidate digests, contract revision, case IDs, runner/environment, seeds, normalization, tolerances, and outcomes.
+- Cover normal, boundary, invalid, stateful, side-effect, concurrency, cancellation, and platform behavior appropriate to scope.
+- Count timeout, crash, runner failure, skipped/unsupported, malformed output, mismatch, and pass distinctly.
+- Use approved tolerances; never normalize away a mismatch or change thresholds to manufacture a pass.
+- Submit minimized behavioral counterexamples for firewall review before implementation feedback.
+
+Example: a timed-out case is inconclusive execution evidence, even if both processes timed out.

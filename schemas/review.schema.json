@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "review",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "spec_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reviewer": {
+      "type": "object",
+      "properties": {
+        "identity": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        },
+        "context_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16000
+        },
+        "exposure": {
+          "enum": [
+            "review-only",
+            "source-exposed"
+          ]
+        }
+      },
+      "required": [
+        "identity",
+        "context_id",
+        "exposure"
+      ],
+      "additionalProperties": false
+    },
+    "decision": {
+      "enum": [
+        "approve",
+        "reject"
+      ]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": {
+            "enum": [
+              "blocking",
+              "advisory"
+            ]
+          },
+          "requirement_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,95}$"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 16000
+          }
+        },
+        "required": [
+          "severity",
+          "requirement_id",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "limits": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 16000
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "spec_sha256",
+    "reviewer",
+    "decision",
+    "findings",
+    "limits"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "corpus-review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "spec_sha256",
+    "cases_sha256",
+    "reviewer",
+    "corpus_origin",
+    "decision",
+    "findings",
+    "limits"
+  ],
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "spec_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "cases_sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identity", "context_id", "exposure"],
+      "properties": {
+        "identity": { "type": "string", "minLength": 1, "maxLength": 16000, "pattern": "\\S" },
+        "context_id": { "type": "string", "minLength": 1, "maxLength": 16000, "pattern": "\\S" },
+        "exposure": { "type": "string", "enum": ["review-only", "source-exposed"] }
+      }
+    },
+    "corpus_origin": {
+      "type": "string",
+      "enum": ["original", "authorized-reference"],
+      "description": "original means independently authored cases; authorized-reference means an authorized third-party corpus retained in the reviewer lane."
+    },
+    "decision": { "type": "string", "enum": ["approve", "reject"] },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "case_id", "reason"],
+        "properties": {
+          "severity": { "type": "string", "enum": ["blocking", "advisory"] },
+          "case_id": { "type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,95}$" },
+          "reason": { "type": "string", "minLength": 1, "maxLength": 16000, "pattern": "\\S" }
+        }
+      }
+    },
+    "limits": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1, "maxLength": 16000, "pattern": "\\S" }
+    }
+  }
+}

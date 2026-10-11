@@ -1,0 +1,16 @@
+---
+description: Separate observation and implementation contexts and verify actual access boundaries.
+alwaysApply: true
+---
+
+# Role isolation
+
+- Use distinct observer, specification writer, firewall reviewer, implementer, and conformance reviewer responsibilities.
+- Any role exposed to original internals or private evidence must not implement the replacement in that run.
+- Start the implementer with a fresh context and no inherited parent conversation, summaries, analysis history, original tests, or source-derived instructions.
+- Supply only the approved handoff and independent build constraints. Verify its exact digest and approval receipt.
+- Restrict filesystem, tools, network, credentials, home/cache access, and mounting behavior according to the sandbox plan.
+- Shared filesystem, a new folder, role names, prompt constraints, and hooks do not establish operating-system isolation. State the controls actually active.
+- Record model/provider/version and known exposure. Model training exposure remains unknown unless independently established.
+
+Example: dispatch a new context with `handoff/` mounted read-only and a writable candidate tree; never fork the observer's conversation into it.

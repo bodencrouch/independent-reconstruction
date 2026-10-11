@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "probes": [
+    {
+      "id": "OBS_reset_probe",
+      "input": {
+        "ops": [
+          {
+            "op": "reset"
+          }
+        ]
+      },
+      "summary": "Reset in a fresh protocol instance returns zero.",
+      "license": "record-applicable-input-output-rights"
+    }
+  ]
+}

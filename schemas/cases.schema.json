@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "cases",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,95}$"
+          },
+          "requirement_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,95}$"
+            },
+            "minItems": 1
+          },
+          "input": {},
+          "comparison": {
+            "enum": [
+              "exact",
+              "numeric"
+            ]
+          },
+          "tolerance": {
+            "type": "object",
+            "properties": {
+              "absolute": {
+                "type": "number",
+                "minimum": 0
+              },
+              "relative": {
+                "type": "number",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "absolute",
+              "relative"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "requirement_ids",
+          "input",
+          "comparison"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "comparison": {
+                  "const": "numeric"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "tolerance"
+              ]
+            },
+            "else": {
+              "not": {
+                "required": [
+                  "tolerance"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "cases"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "spec_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "cases_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "reviewer": {
+    "identity": "REPLACE_WITH_ACTUAL_REVIEWER",
+    "context_id": "REPLACE_WITH_REGISTERED_FIREWALL_CONTEXT",
+    "exposure": "review-only"
+  },
+  "corpus_origin": "original",
+  "decision": "reject",
+  "findings": [],
+  "limits": [
+    "Template only: conduct an actual semantic review, replace both canonical hashes, and record honest limits before changing the decision.",
+    "This approval permits reviewer-side validation only; it does not authorize transferring raw cases or outputs to implementation.",
+    "No legal determination or exhaustive behavioral equivalence is established."
+  ]
+}

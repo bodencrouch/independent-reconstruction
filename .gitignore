@@ -1,0 +1,10 @@
+.ir/
+private/
+runs/
+handoffs/
+candidate/
+exports/
+__pycache__/
+*.pyc
+.independent-reconstruction/
+*.log

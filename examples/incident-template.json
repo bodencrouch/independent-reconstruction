@@ -1,0 +1,10 @@
+{
+  "kind": "source-exposure",
+  "summary": "RECORD_FACTS_WITHOUT_SOURCE_EXCERPTS",
+  "affected_roles": [
+    "implementer"
+  ],
+  "evidence_ids": [],
+  "containment": "Quarantine this run and preserve affected artifacts privately.",
+  "recovery": "Create a fresh context and new run from separately reviewed unaffected observations."
+}

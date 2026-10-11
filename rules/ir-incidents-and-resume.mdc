@@ -1,0 +1,16 @@
+---
+description: Preserve incident history, quarantine affected artifacts, and resume only verified clean states.
+alwaysApply: true
+---
+
+# Incidents and resume
+
+- Pause an affected transfer when prohibited source, private evidence, inherited context, secrets, or altered approval bindings reach the wrong lane.
+- Record a minimal private incident and affected hashes/roles. Preserve work and audit history; quarantine dependent artifacts.
+- A context cannot undo exposure by forgetting, renaming code, changing syntax, or lowering similarity.
+- Recover with a fresh restricted implementer and reapproved handoff, or reclassify the work honestly as source-informed.
+- Before resume, verify audit integrity, exact artifact bindings, current environment/configuration, cache lineage, and unresolved incidents.
+- Do not reuse tainted caches or count old validation against a changed candidate/specification.
+- Report weaker controls or missing records rather than filling gaps with fabricated attestations.
+
+Example: an upstream test leaked into implementation invalidates that context's exposure claim; quarantine its outputs before selecting a recovery plan.

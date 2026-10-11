@@ -1,0 +1,16 @@
+---
+description: Preserve private evidence lineage and accurately label uncertainty and source exposure.
+alwaysApply: true
+---
+
+# Evidence provenance
+
+- Store raw inputs, original identities/paths, source links, transcripts, sensitive outputs, and provenance mappings in the private lane.
+- Reference evidence through opaque IDs in reviewed specifications and public reports.
+- Bind records to run, target/version/digest, environment, input, observation method, result, and uncertainty.
+- Keep observed, documented, inferred, and unknown distinctions. Generalizing one result creates an inference.
+- Preserve source exposure and third-party material classifications through rewriting, translation, caching, and resume.
+- Preserve prior records and superseded approvals. Hash chains provide bounded integrity evidence; storage-owner control limits their assurance.
+- Keep secrets and private filenames out of terminal/user-facing output. Use synthetic payloads for transferable examples.
+
+Example: requirement R-12 cites E-37 as observed under environment ENV-2; the private registry resolves E-37 to raw evidence.

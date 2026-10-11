@@ -1,0 +1,9 @@
+{
+  "role": "implementer",
+  "provider": "RECORD_ACTUAL_PROVIDER",
+  "model": "RECORD_ACTUAL_MODEL",
+  "context_id": "RECORD_FRESH_SESSION",
+  "exposure": "sealed-spec-only",
+  "artifacts": [],
+  "training_history": "unknown"
+}

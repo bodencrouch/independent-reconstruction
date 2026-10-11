@@ -1,0 +1,8 @@
+{
+  "name": "independent-reconstruction",
+  "version": "0.1.0",
+  "description": "Original implementations from reviewed behavioral contracts, sealed handoffs and bounded conformance evidence.",
+  "author": {
+    "name": "Workspace owner"
+  }
+}

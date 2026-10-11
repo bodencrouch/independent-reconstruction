@@ -1,0 +1,32 @@
+# Select a command
+
+These procedures apply to a dedicated reconstruction workflow. Preserve role separation, private provenance and bounded claims.
+
+- [ir-api-protocol](ir-api-protocol.md)
+- [ir-audit](ir-audit.md)
+- [ir-binary](ir-binary.md)
+- [ir-compare](ir-compare.md)
+- [ir-compiler](ir-compiler.md)
+- [ir-conformance](ir-conformance.md)
+- [ir-coverage](ir-coverage.md)
+- [ir-cross-language](ir-cross-language.md)
+- [ir-dependencies](ir-dependencies.md)
+- [ir-file-format](ir-file-format.md)
+- [ir-firewall](ir-firewall.md)
+- [ir-handoff](ir-handoff.md)
+- [ir-implement](ir-implement.md)
+- [ir-incident](ir-incident.md)
+- [ir-library](ir-library.md)
+- [ir-numeric](ir-numeric.md)
+- [ir-observe](ir-observe.md)
+- [ir-preflight](ir-preflight.md)
+- [ir-release](ir-release.md)
+- [ir-resume](ir-resume.md)
+- [ir-sandbox](ir-sandbox.md)
+- [ir-source-informed](ir-source-informed.md)
+- [ir-spec](ir-spec.md)
+- [ir-start](ir-start.md)
+- [ir-stateful](ir-stateful.md)
+- [ir-status](ir-status.md)
+
+- [ir-approve-cases](ir-approve-cases.md)

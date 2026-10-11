@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "target": {
+    "name": "counter-protocol",
+    "version": "fictional-1",
+    "interface": "JSON operation sequence",
+    "language": "Python",
+    "environment": "Integer arithmetic; one request per process"
+  },
+  "requirements": [
+    {
+      "id": "REQ_reset",
+      "statement": "Reset makes the counter zero and returns zero.",
+      "category": "state",
+      "evidence": [
+        "OBS_contract"
+      ],
+      "confidence": "observed",
+      "acceptance": [
+        "CASE_reset"
+      ]
+    },
+    {
+      "id": "REQ_add",
+      "statement": "Adding an integer changes the counter by that integer and returns the new value. Each request starts at zero.",
+      "category": "state",
+      "evidence": [
+        "OBS_contract"
+      ],
+      "confidence": "observed",
+      "acceptance": [
+        "CASE_sequence",
+        "CASE_negative"
+      ]
+    }
+  ],
+  "interfaces": [
+    {
+      "name": "counter-sequence",
+      "inputs": "An object with ops, an array of objects with op reset or add. Add includes integer value.",
+      "outputs": "An array of returned integer values in operation order.",
+      "errors": "Invalid operations are outside this fictional contract."
+    }
+  ],
+  "exclusions": [
+    "Malformed input and persistence across processes"
+  ],
+  "unknowns": [
+    "Overflow limits of a future fixed-width port"
+  ]
+}
